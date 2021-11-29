@@ -1,0 +1,23 @@
+<div>
+    <h4 class="subtitle h4">Cadastre-se aqui</h4>
+    <br>
+    <label>
+        Nome
+        <br>
+        <input class="input" type="text" [formControl]="nome">
+    </label>
+    <br>
+    <label>
+        Login
+        <br>
+        <input class="input" type="text" [formControl]="login">
+    </label>
+    <br>
+    <label>
+        Senha
+        <br>
+        <input class="input" type="password" [formControl]="senha">
+    </label>
+    <br>
+    <button class="button" (click)=cadastrarUsuario()>Cadastrar</button>
+</div>

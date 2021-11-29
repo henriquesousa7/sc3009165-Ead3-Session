@@ -1,0 +1,30 @@
+<app-header></app-header>
+<br><br>
+<main class="columns">
+    <div class="column is-1"></div>
+    <div class="column is-5">
+        <form class="ng-untouched ng-pristine ng-invalid" [formGroup]="formMensagem">
+            <div class="field"><label class="label">Digite uma mensagem para
+                    cadastrar</label>
+                <div class="control"><textarea formControlName="texto"
+                        rows="6" placeholder="Digite o texto desejado" maxlength="500"
+                        class="textarea has-fixed-size ng-untouched ng-pristine ng-invalid"></textarea></div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control"><button
+                        class="button is-link" (click)=cadastrarMensagem()>Cadastrar</button></div>
+            </div>
+        </form>
+    </div>
+    <div class="column is-1"></div>
+    <div class="column is-4">
+        <ng-container *ngFor="let mensagem of mensagens">
+            <div class="field ng-star-inserted"><label class="label">Mensagem
+                    postada em {{mensagem.date}}</label>
+                <div class="control"><textarea disabled=""
+                        class="textarea has-fixed-size">{{mensagem.text}}</textarea></div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="column is-1"></div>
+</main>

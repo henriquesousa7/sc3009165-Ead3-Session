@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+app-login {
+    margin: 20vh;
+}
+
+app-cadastro {
+    margin: 20vh;
+}

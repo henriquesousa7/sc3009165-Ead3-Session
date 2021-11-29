@@ -1,0 +1,15 @@
+div {
+    width: 50vh;
+}
+
+h4 {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(53, 212, 53);
+}
+
+label {
+    font-weight: bold;
+}

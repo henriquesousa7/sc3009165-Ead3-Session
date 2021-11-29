@@ -1,0 +1,16 @@
+<div>
+    <h4 class="subtitle h4">Faça o login aqui</h4>
+    <label>
+        Login
+        <br>
+        <input class="input" type="text" [formControl]="login">
+    </label>
+    <br>
+    <label>
+        Senha
+        <br>
+        <input class="input" type="password" [formControl]="senha">
+    </label>
+    <br>
+    <button class="button" (click)="exibirMessages()">Login</button>
+</div>
