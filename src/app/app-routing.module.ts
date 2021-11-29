@@ -14,7 +14,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'messages',
+    path: 'messages/:nome',
     component: MensagemComponent
   }
 ];

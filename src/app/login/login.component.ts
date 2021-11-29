@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       }
 
       if (this.loginService.estaLogado()) {
-        this.router.navigate(['/messages']);
+        this.router.navigate(['/messages/' + res.body.userName]);
       } else {
         alert("Login ou senha invalidos");
       }

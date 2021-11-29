@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 import { MensagemService } from '../mensagem.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mensagem',
@@ -14,8 +15,9 @@ export class MensagemComponent implements OnInit {
   formMensagem: FormGroup;
   //stexto = new FormControl('');
   mensagens : any;
+  nomeUsuario: string = "";
 
-  constructor(private mensagemService : MensagemService, private loginService: LoginService, private router: Router) { }
+  constructor(private mensagemService : MensagemService, private loginService: LoginService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -23,6 +25,10 @@ export class MensagemComponent implements OnInit {
       this.carregarMensagens();
     } else {
       this.router.navigate(['/']);
+    }
+
+    if (this.activatedRoute.snapshot.paramMap.get('nome')) {
+      this.nomeUsuario = this.activatedRoute.snapshot.paramMap.get('nome')
     }
   }  
 
